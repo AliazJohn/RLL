@@ -1,0 +1,60 @@
+
+mysql> use emedicare;
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_emedicare |
++---------------------+
+| admin               |
+| cart                |
+| contact_us          |
+| medicines           |
+| user                |
++---------------------+
+5 rows in set (0.08 sec)
+mysql> select * from medicines;
++-------------+-------------------------+------------+------------------+------------------+-------+-----------+-----------+-------+-------+
+| medicine_id | description             | expdate    | manufacture_date | medicine_name    | price | seller    | status    | type  | stock |
++-------------+-------------------------+------------+------------------+------------------+-------+-----------+-----------+-------+-------+
+|           2 | HimalayaFaceWashof200ml | 13-06-2023 | 17-09-2022       | HimalayaFaceWash |   216 | Himalaya  | Available | Face  | NULL  |
+|           6 | Fever                   | 2023-10-19 | 2022-10-20       | Dolo             |    79 | Emedicare | Available | Fever | 10    |
+|           7 | Iodex of 65g            | 2024-10-19 | 2022-10-21       | Iodex            |   179 | Iodex     | Available | Head  | 70    |
+|           8 | face glow               | 2023-10-19 | 2022-10-28       | NeemCream        |    98 | Neem      | Available | Face  | 78    |
+|           9 | Face shine and clean    | 2024-06-05 | 2022-10-05       | Power            |    78 | Power     | Available | Face  |       |
++-------------+-------------------------+------------+------------------+------------------+-------+-----------+-----------+-------+-------+
+5 rows in set (0.02 sec)
+mysql> select * from admin;
++----------+------------+----------+
+| admin_id | admin      | password |
++----------+------------+----------+
+|        1 | Amaravathy | Amar     |
++----------+------------+----------+
+1 row in set (0.03 sec)
+mysql> select * from cart;
++-------------+-------------------------+------------------+-------+
+| medicine_id | description             | medicine_name    | price |
++-------------+-------------------------+------------------+-------+
+|           2 | HimalayaFaceWashof200ml | HimalayaFaceWash |   216 |
+|           3 | Iodex50g                | Iodex            |   146 |
+|           6 | Fever                   | Dolo             |    79 |
+|           7 | Iodex of 65g            | Iodex            |   179 |
+|           8 | face glow               | NeemCream        |    98 |
++-------------+-------------------------+------------------+-------+
+5 rows in set (0.01 sec)
+
+mysql> select * from user;
++---------+-----+-------------+--------+-----------+------------+------------+------------+
+| user_id | age | first_name  | gender | last_name | mobile_no  | password   | username   |
++---------+-----+-------------+--------+-----------+------------+------------+------------+
+|       1 |  22 | Amaravathyp | female | pa        | 6383445566 | amaravathy | Amaravathy |
+|       2 |  34 | Jeni        | femlae | P         | 9988776655 | jeni       | jeni       |
+|       3 |  22 | Vyshanavi   | female | Ankireddy | 9988866771 | vysh       | Vyshanavi  |
++---------+-----+-------------+--------+-----------+------------+------------+------------+
+3 rows in set (0.00 sec)
+mysql> select * from contact_us;
++------+------------+-------------+---------------------------+------------+
+| c_id | contact_no | description | email_id                  | name       |
++------+------------+-------------+---------------------------+------------+
+|    1 |       4555 | ff          | pamaravathy2000@gmail.com | Amaravathy |
++------+------------+-------------+---------------------------+------------+
+1 row in set (0.01 sec)
